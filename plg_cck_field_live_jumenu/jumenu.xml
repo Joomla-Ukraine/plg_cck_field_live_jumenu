@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin"
+           group="cck_field_live"
+           version="3.9"
+           method="upgrade">
+	<name>plg_cck_field_live_jumenu</name>
+    <author>Denys Nosov (Joomla! Ukraine)</author>
+    <authorEmail>denys@joomla-ua.org</authorEmail>
+    <authorUrl>https://joomla-ua.org</authorUrl>
+    <copyright>Copyright (C) 2023 Joomla! Ukraine. All Rights Reserved.</copyright>
+    <license>GNU General Public License version 2 or later.</license>
+	<creationDate>@date@</creationDate>
+	<description>Live plugin for use params from menu for SEBLOD 3.x</description>
+	<version>@version@</version>
+	
+	<scriptfile>install/script.php</scriptfile>
+	
+	<files>
+		<folder>assets</folder>
+		<folder>install</folder>
+		<folder>tmpl</folder>
+		
+		<filename plugin="jumenu">jumenu.php</filename>
+	</files>
+	
+	<languages folder="languages">
+		<language tag="en-GB">en-GB/en-GB.plg_cck_field_live_jumenu.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_cck_field_live_jumenu.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params"
+		        addfieldpath="/libraries/cck/construction/field">
+			<fieldset name="basic">
+				<field name=""
+				       type="spacer"
+				       hr="false" />
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="group"
+				       type="text"
+				       default="PLG_CCK_FIELD_LIVE_GROUP_CCK"
+				       label="LIB_CCK_GROUP_LABEL"
+				       size="60"
+				       description="LIB_CCK_FIELD_LIVE_GROUP_DESC" />
+				<field name="export"
+				       type="cckexport"
+				       default=""
+				       label="LIB_CCK_EXPORT_LABEL"
+				       description="LIB_CCK_FIELD_LIVE_EXPORT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>
